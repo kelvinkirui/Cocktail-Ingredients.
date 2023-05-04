@@ -1,4 +1,5 @@
 import React from "react";
+import { useGlobaContext } from "../context";
 
 
 const SearchForm = () => {
