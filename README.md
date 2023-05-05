@@ -29,3 +29,13 @@ This is an application called Cocktail ingredient application that educates peop
 ```
 MIT LICENCE
 ```
+
+## Live site
+```
+https://kelvinkirui.github.io/Cocktail-Ingredients./
+```
+
+# Author
+```
+Kelvin Kiprono
+```
