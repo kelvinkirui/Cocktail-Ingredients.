@@ -32,7 +32,7 @@ MIT LICENCE
 
 ## Live site
 ```
-https://kelvinkirui.github.io/Cocktail-Ingredients./
+https://cocktail-ingredients.vercel.app
 ```
 
 # Author
