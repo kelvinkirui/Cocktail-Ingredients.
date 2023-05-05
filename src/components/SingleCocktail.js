@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import Loading from "./loading";
+
 const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
 const SingleCocktail = () => {
-  //const { id } = useParams();
+  const { id } = useParams();
   const [loading, setLoading] = useState(false);
   const [cocktail, setCocktail] = useState(null);
 
@@ -11,7 +15,7 @@ const SingleCocktail = () => {
       setLoading(true);
       const response = await fetch(`${url}${id}`);
       const { drinks } = await response.json();
-      
+      // console.log(drinks);
       if (drinks) {
         setCocktail(drinks);
         setLoading(false);
@@ -28,8 +32,12 @@ const SingleCocktail = () => {
     fetchById();
   }, [id]);
 
+  if(loading){
+    return <Loading/>
+  }
+
   if(!cocktail){
-    return <h2 className="section-title">Cocktail not found</h2>
+    return <h2 className="section-title">No cocktail to display</h2>
   }
 
   return (

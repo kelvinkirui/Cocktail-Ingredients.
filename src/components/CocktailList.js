@@ -1,16 +1,18 @@
 import React from "react";
+import { useGlobaContext } from "../context";
+import Loading from "./loading";
 import Cocktail from './Cocktail';
 
 const CocktailList = () => {
-  
-   console.log(cocktails);
+  const { loading, cocktails } = useGlobaContext();
+  // console.log(cocktails);
   if (loading) {
     return <Loading />;
   }
   if (cocktails.length < 1) {
     return (
       <h2 className="section-title">
-        No Cocktails Matched Your Search Criteria
+        No Cocktails Matched Your Search
       </h2>
     );
   }

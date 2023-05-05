@@ -1,5 +1,6 @@
 import React from "react";
 import SingleCocktail from "./SingleCocktail";
+import { NavLink } from "react-router-dom";
 
 const Cocktail = ({ drink }) => {
   return (
